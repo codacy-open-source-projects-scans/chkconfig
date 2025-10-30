@@ -1,0 +1,630 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Maxim Dziumanenko <dziumanenko@gmail.com>, 2003
+# notting <notting@redhat.com>, 2011
+# Yuri Chornoivan <yurchor@ukr.net>, 2011-2013, 2020, 2021, 2022, 2023, 2024, 2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2015. #zanata, 2020, 2021, 2022, 2023, 2024, 2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2017. #zanata, 2020, 2021, 2022, 2023, 2024, 2025.
+# Allan Nordhøy <epost@anotheragency.no>, 2020.
+# Dmytro Markevych <hotr1pak@gmail.com>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-09 17:46+0200\n"
+"PO-Revision-Date: 2025-06-13 08:44+0000\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <https://translate.fedoraproject.org/projects/"
+"fedora-sysv/chkconfig/uk/>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.11.4\n"
+
+#: ../chkconfig.c:41
+#, c-format
+msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s версія %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+
+#: ../chkconfig.c:43
+#, c-format
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "Може вільно розповсюджуватись на умовах ліцензії GNU Public License.\n"
+
+#: ../chkconfig.c:47
+#, c-format
+msgid "usage:   %s [name]\n"
+msgstr "користування:   %s [назва]\n"
+
+#: ../chkconfig.c:49
+#, c-format
+msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
+msgstr "Користування:   %s <enable|disable|is-enabled> [назва] \n"
+
+#: ../chkconfig.c:52
+#, c-format
+msgid "usage:   %s [--list] [--type <type>] [name]\n"
+msgstr "використання:   %s [--list] [--type <тип>] [служба]\n"
+
+#: ../chkconfig.c:54
+#, c-format
+msgid "         %s --add <name>\n"
+msgstr "         %s --add <служба>\n"
+
+#: ../chkconfig.c:55
+#, c-format
+msgid "         %s --del <name>\n"
+msgstr "         %s --del <служба>\n"
+
+#: ../chkconfig.c:56
+#, c-format
+msgid "         %s --override <name>\n"
+msgstr "         %s --override <служба>\n"
+
+#: ../chkconfig.c:58
+#, c-format
+msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
+msgstr "         %s [--level <рівні>] [--type <тип] <служба> %s\n"
+
+#: ../chkconfig.c:66
+#, c-format
+msgid ""
+"\n"
+"Note: This output shows SysV services only and does not include native\n"
+"      systemd services. SysV configuration data might be overridden by "
+"native\n"
+"      systemd configuration.\n"
+"\n"
+msgstr ""
+"\n"
+"Зауваження: у виведених даних показано лише служби SysV, там немає типових\n"
+"      служб systemd. Дані налаштування SysV могли бути перезаписані "
+"типовими\n"
+"      налаштуваннями systemd.\n"
+"\n"
+
+#: ../chkconfig.c:73
+#, c-format
+msgid ""
+"      If you want to list systemd services use 'systemctl list-unit-files'.\n"
+"      To see services enabled on particular target use\n"
+"      'systemctl list-dependencies [target]'.\n"
+"\n"
+msgstr ""
+"      Якщо вам потрібен список служб systemd, скористайтеся командою "
+"«systemctl list-unit-files».\n"
+"      Щоб переглянути служби, увімкнені для певної мети, скористайтеся "
+"командою\n"
+"      «systemctl list-dependencies [мета]».\n"
+"\n"
+
+#: ../chkconfig.c:83
+#, c-format
+msgid ""
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
+msgstr ""
+"служба %s підтримує chkconfig, але не використовується на жодному рівні "
+"виконання (запустіть 'chkconfig --add %s')\n"
+
+#: ../chkconfig.c:87
+#, c-format
+msgid "service %s does not support chkconfig\n"
+msgstr "служба %s не підтримує chkconfig\n"
+
+#: ../chkconfig.c:89
+#, c-format
+msgid "error reading information on service %s: %s\n"
+msgstr "помилка читання інформації у службі %s: %s\n"
+
+#: ../chkconfig.c:98
+#, c-format
+msgid "You do not have enough privileges to perform this operation.\n"
+msgstr "У вас недостатньо повноважень для виконання цієї дії.\n"
+
+#: ../chkconfig.c:469 ../chkconfig.c:474 ../chkconfig.c:600
+msgid "on"
+msgstr "ввімк"
+
+#: ../chkconfig.c:469 ../chkconfig.c:474 ../chkconfig.c:600
+msgid "off"
+msgstr "вимк"
+
+#: ../chkconfig.c:555
+#, c-format
+msgid "xinetd based services:\n"
+msgstr "служби, що базуються на xinetd:\n"
+
+#: ../chkconfig.c:557
+#, c-format
+msgid "failed to open directory %s: %s\n"
+msgstr "не вдається відкрити каталог %s: %s\n"
+
+#: ../chkconfig.c:695
+#, c-format
+msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
+msgstr "Зауваження: переспрямування запиту до «systemctl %s %s».\n"
+
+#: ../chkconfig.c:701
+#, c-format
+msgid "Failed to forward service request to systemctl: %m\n"
+msgstr "Не вдалося переспрямувати запит щодо обслуговування до systemctl: %m\n"
+
+#: ../chkconfig.c:757
+#, c-format
+msgid "%s version %s\n"
+msgstr "%s версія %s\n"
+
+#: ../chkconfig.c:770
+#, c-format
+msgid "--type must be 'sysv' or 'xinetd'\n"
+msgstr "аргументом --type має бути «sysv» або «xinetd»\n"
+
+#: ../chkconfig.c:776
+#, c-format
+msgid "only one of --list, --add, --del, or --override may be specified\n"
+msgstr ""
+"можна вказувати лише один аргумент з --list, --add, --del або --override\n"
+
+#: ../chkconfig.c:887
+#, c-format
+msgid "only one runlevel may be specified for a chkconfig query\n"
+msgstr "можна вказувати лише один рівень виконання для запиту chkconfig\n"
+
+#: ../ntsysv.c:49
+msgid "Press <F1> for more information on a service."
+msgstr "Натисніть <F1> для докладнішої інформації про службу."
+
+#: ../ntsysv.c:99 ../ntsysv.c:138
+msgid "Ok"
+msgstr "Гаразд"
+
+#: ../ntsysv.c:99
+msgid "Back"
+msgstr "Назад"
+
+#: ../ntsysv.c:99
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: ../ntsysv.c:111
+msgid "What services should be automatically started?"
+msgstr "Які служби треба запускати автоматично?"
+
+#: ../ntsysv.c:118
+msgid "Services"
+msgstr "Служби"
+
+#: ../ntsysv.c:334 ../ntsysv.c:363 ../ntsysv.c:402
+#, c-format
+msgid "error reading info for service %s: %s\n"
+msgstr "помилка читання даних для служби %s: %s\n"
+
+#: ../ntsysv.c:412
+#, c-format
+msgid "error reading from directory %s: %s\n"
+msgstr "помилка читання з каталогу %s: %s\n"
+
+#: ../ntsysv.c:452
+#, c-format
+msgid "You must be root to run %s.\n"
+msgstr "Для виконання %s необхідні повноваження адміністратора (root).\n"
+
+#: ../ntsysv.c:469
+#, c-format
+msgid "bad argument to --levels\n"
+msgstr "неправильний аргумент в --levels\n"
+
+#: ../ntsysv.c:477
+#, c-format
+msgid "No services may be managed by ntsysv!\n"
+msgstr "Немає служб, які керуються ntsysv!\n"
+
+#: ../leveldb.c:348
+#, c-format
+msgid "failed to open %s/init.d: %s\n"
+msgstr "не вдається відкрити %s/init.d: %s\n"
+
+#: ../leveldb.c:797 ../leveldb.c:805
+#, c-format
+msgid "failed to glob pattern %s: %s\n"
+msgstr "не вдається визначити шаблон %s: %s\n"
+
+#: ../leveldb.c:851
+#, c-format
+msgid "cannot determine current run level\n"
+msgstr "не вдається визначити поточний рівень виконання\n"
+
+#: ../leveldb.c:934
+#, c-format
+msgid "Unable to set SELinux context for %s: %s\n"
+msgstr "Не вдалося встановити контекст SELinux для %s: %s\n"
+
+#: ../leveldb.c:959
+#, c-format
+msgid "failed to make symlink %s: %s\n"
+msgstr "не вдається створити символічне посилання %s: %s\n"
+
+#: ../alternatives.c:83
+#, c-format
+msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
+msgstr "alternatives версія %s — © Red Hat, Inc., 2001\n"
+
+#: ../alternatives.c:85
+#, c-format
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+"\n"
+msgstr ""
+"Може вільно розповсюджуватись за умов дотримання GNU Public License.\n"
+"\n"
+
+#: ../alternatives.c:88
+#, c-format
+msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
+msgstr ""
+"використання: alternatives --install <посилання> <назва> <шлях> <пріоритет>\n"
+
+#: ../alternatives.c:89
+#, c-format
+msgid "                    [--initscript <service>]\n"
+msgstr "                    [--initscript <служба>]\n"
+
+#: ../alternatives.c:90
+#, c-format
+msgid "                    [--family <family>]\n"
+msgstr "                    [--family <сімейство>]\n"
+
+#: ../alternatives.c:91
+#, c-format
+msgid ""
+"                    [--follower <follower_link> <follower_name> "
+"<follower_path>]*\n"
+msgstr ""
+"                    [--follower <посилання_послідовника> "
+"<назва_послідовника> <шлях_послідовника>]*\n"
+
+#: ../alternatives.c:92
+#, c-format
+msgid "       alternatives --remove <name> <path>\n"
+msgstr "       alternatives --remove <назва> <шлях>\n"
+
+#: ../alternatives.c:93
+#, c-format
+msgid "       alternatives --auto <name>\n"
+msgstr "       alternatives --auto <назва>\n"
+
+#: ../alternatives.c:94
+#, c-format
+msgid "       alternatives --config <name>\n"
+msgstr "       alternatives --config <назва>\n"
+
+#: ../alternatives.c:95
+#, c-format
+msgid "       alternatives --display <name>\n"
+msgstr "       alternatives --display <назва>\n"
+
+#: ../alternatives.c:96
+#, c-format
+msgid "       alternatives --set <name> <path/family>\n"
+msgstr "       alternatives --set <назва> <шлях/сімейство>\n"
+
+#: ../alternatives.c:97
+#, c-format
+msgid "       alternatives --list\n"
+msgstr "       alternatives --list\n"
+
+#: ../alternatives.c:98
+#, c-format
+msgid "       alternatives --remove-all <name>\n"
+msgstr "       alternatives --remove-all <назва>\n"
+
+#: ../alternatives.c:99
+#, c-format
+msgid ""
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
+msgstr ""
+"       alternatives --add-follower <назва> <шлях> <посилання_послідовника> "
+"<назва_послідовника> <шлях_послідовника>\n"
+
+#: ../alternatives.c:100
+#, c-format
+msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
+msgstr ""
+"       alternatives --remove-follower <назва> <шлях> <назва_послідовника>\n"
+
+#: ../alternatives.c:101
+#, c-format
+msgid "\n"
+msgstr "\n"
+
+#: ../alternatives.c:102
+#, c-format
+msgid ""
+"common options: --verbose --test --help --usage --version --keep-missing --"
+"keep-foreign\n"
+msgstr ""
+"загальні параметри: --verbose --test --help --usage --version --keep-missing "
+"--keep-foreign\n"
+
+#: ../alternatives.c:104
+#, c-format
+msgid "                --altdir <directory> --admindir <directory>\n"
+msgstr "                --altdir <каталог> --admindir <каталог>\n"
+
+#: ../alternatives.c:372
+#, c-format
+msgid "reading %s\n"
+msgstr "читаємо %s\n"
+
+#: ../alternatives.c:377
+#, c-format
+msgid "failed to open %s: %s\n"
+msgstr "не вдається відкрити %s: %s\n"
+
+#: ../alternatives.c:385
+#, c-format
+msgid "failed to read %s: %s\n"
+msgstr "не вдається прочитати %s: %s\n"
+
+#: ../alternatives.c:393
+#, c-format
+msgid "%s empty!\n"
+msgstr "%s порожній!\n"
+
+#: ../alternatives.c:403
+#, c-format
+msgid "bad mode on line 1 of %s\n"
+msgstr "неправильний режим у рядку 1 %s\n"
+
+#: ../alternatives.c:410
+#, c-format
+msgid "bad primary link in %s\n"
+msgstr "неправильне основне посилання %s\n"
+
+#: ../alternatives.c:423
+#, c-format
+msgid "path %s unexpected in %s\n"
+msgstr "неочікуваний шлях %s у %s\n"
+
+#: ../alternatives.c:432
+#, c-format
+msgid "missing path for follower %s in %s\n"
+msgstr "не вказано шлях для послідовника %s у %s\n"
+
+#: ../alternatives.c:447
+#, c-format
+msgid "unexpected end of file in %s\n"
+msgstr "неочікуваний кінець файла у %s\n"
+
+#: ../alternatives.c:455
+#, c-format
+msgid "path to alternate expected in %s\n"
+msgstr "у %s очікується шлях до альтернативи\n"
+
+#: ../alternatives.c:456 ../alternatives.c:484 ../alternatives.c:497
+#: ../alternatives.c:513 ../alternatives.c:539
+#, c-format
+msgid "unexpected line in %s: %s\n"
+msgstr "неочікуваний рядок у %s: %s\n"
+
+#: ../alternatives.c:482
+#, c-format
+msgid "closing '@' missing or the family is empty in %s\n"
+msgstr "пропущено завершальний символ «@» або порожнє сімейство у %s\n"
+
+#: ../alternatives.c:496
+#, c-format
+msgid "numeric priority expected in %s\n"
+msgstr "%s повинен бути числовим пріоритетом\n"
+
+#: ../alternatives.c:512
+#, c-format
+msgid "follower path expected in %s\n"
+msgstr "у %s мало бути вказано шлях послідовника\n"
+
+#: ../alternatives.c:549
+#, c-format
+msgid "failed to read link %s: %s\n"
+msgstr "не вдається прочитати посилання %s: %s\n"
+
+#: ../alternatives.c:566
+#, c-format
+msgid "link points to no alternative -- setting mode to manual\n"
+msgstr ""
+"посилання вказує на безальтернативний елемент - встановлюється ручний режим\n"
+
+#: ../alternatives.c:571
+#, c-format
+msgid "link changed -- setting mode to manual\n"
+msgstr "посилання змінено -- встановлюється ручний режим\n"
+
+#: ../alternatives.c:629 ../alternatives.c:636
+#, c-format
+msgid "would remove %s\n"
+msgstr "буде видалено %s\n"
+
+#: ../alternatives.c:631 ../alternatives.c:640 ../alternatives.c:693
+#, c-format
+msgid "failed to remove link %s: %s\n"
+msgstr "не вдається видалити посилання %s: %s\n"
+
+#: ../alternatives.c:659
+#, c-format
+msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
+msgstr ""
+"не вдалося створити посилання %s -> %s: %s існує, але це не символічне "
+"посилання.\n"
+
+#: ../alternatives.c:664
+#, c-format
+msgid ""
+"failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
+"%s\n"
+msgstr ""
+"не вдалося створити посилання %s -> %s: %s вже існує і посилання вказує на "
+"місце поза %s\n"
+
+#: ../alternatives.c:668 ../alternatives.c:686
+#, c-format
+msgid "would link %s -> %s\n"
+msgstr "буде створено посилання %s -> %s\n"
+
+#: ../alternatives.c:677 ../alternatives.c:699
+#, c-format
+msgid "failed to link %s -> %s: %s\n"
+msgstr "не вдається створити посилання %s -> %s: %s\n"
+
+#: ../alternatives.c:732
+#, c-format
+msgid "%s already exists\n"
+msgstr "%s вже існує\n"
+
+#: ../alternatives.c:734
+#, c-format
+msgid "failed to create %s: %s\n"
+msgstr "не вдається створити %s: %s\n"
+
+#: ../alternatives.c:767
+#, c-format
+msgid "failed to replace %s with %s: %s\n"
+msgstr "не вдається замінити %s на %s: %s\n"
+
+#: ../alternatives.c:795 ../alternatives.c:801 ../alternatives.c:813
+#: ../alternatives.c:820
+#, c-format
+msgid "running %s\n"
+msgstr "запускається %s\n"
+
+#: ../alternatives.c:894
+#, c-format
+msgid "link %s incorrect for follower %s (%s %s)\n"
+msgstr "посилання %s є неправильним для послідовника %s (%s %s)\n"
+
+#: ../alternatives.c:969 ../alternatives.c:1006 ../alternatives.c:1220
+#: ../alternatives.c:1251
+#, c-format
+msgid "%s has not been configured as an alternative for %s\n"
+msgstr "%s не було налаштовано як альтернативу для %s\n"
+
+#: ../alternatives.c:987
+#, c-format
+msgid "%s has not been configured as an follower alternative for %s (%s)\n"
+msgstr "%s не було налаштовано як альтернативу послідовника для %s (%s)\n"
+
+#: ../alternatives.c:1045
+#, c-format
+msgid "the primary link for %s must be %s\n"
+msgstr "основним посиланням на %s має бути %s\n"
+
+#: ../alternatives.c:1097
+#, c-format
+msgid "%s - status is auto.\n"
+msgstr "%s - стан \"авто\".\n"
+
+#: ../alternatives.c:1099
+#, c-format
+msgid "%s - status is manual.\n"
+msgstr "%s - стан \"вручну\".\n"
+
+#: ../alternatives.c:1101
+#, c-format
+msgid " link currently points to %s\n"
+msgstr " посилання наразі вказує на %s\n"
+
+#: ../alternatives.c:1106
+#, c-format
+msgid "family %s "
+msgstr "сімейство %s "
+
+#: ../alternatives.c:1107
+#, c-format
+msgid "priority %d\n"
+msgstr "пріоритетність %d\n"
+
+#: ../alternatives.c:1109
+#, c-format
+msgid " follower %s: %s\n"
+msgstr " послідовник %s: %s\n"
+
+#: ../alternatives.c:1114
+#, c-format
+msgid "Current `best' version is %s.\n"
+msgstr "Поточна \"найкраща\" версія - %s.\n"
+
+#: ../alternatives.c:1149
+#, c-format
+msgid "There is %d program that provides '%s'.\n"
+msgstr "Є %d програм, які забезпечують '%s'.\n"
+
+#: ../alternatives.c:1150
+#, c-format
+msgid "There are %d programs which provide '%s'.\n"
+msgstr "Є %d програм, які забезпечують '%s'.\n"
+
+#: ../alternatives.c:1154
+#, c-format
+msgid "  Selection    Command\n"
+msgstr "  Вибір    Команда\n"
+
+#: ../alternatives.c:1169
+#, c-format
+msgid "Enter to keep the current selection[+], or type selection number: "
+msgstr "Enter - зберегти поточний вибір[+], або вкажіть номер: "
+
+#: ../alternatives.c:1173
+#, c-format
+msgid ""
+"\n"
+"error reading choice\n"
+msgstr ""
+"\n"
+"помилка читання вибору\n"
+
+#: ../alternatives.c:1200
+#, c-format
+msgid "cannot access %s/%s: No such file or directory\n"
+msgstr "не вдалося отримати доступ до %s/%s: немає такого файла або каталогу\n"
+
+#: ../alternatives.c:1267
+#, c-format
+msgid "(would remove %s\n"
+msgstr "( буде видалено %s\n"
+
+#: ../alternatives.c:1269
+#, c-format
+msgid "failed to remove %s: %s\n"
+msgstr "не вдається видалити %s: %s\n"
+
+#: ../alternatives.c:1444
+#, c-format
+msgid "--family can't contain the symbol '@'\n"
+msgstr "--family не може містити символу «@»\n"
+
+#: ../alternatives.c:1506
+#, c-format
+msgid "altdir %s invalid\n"
+msgstr "каталог altdir %s неправильний\n"
+
+#: ../alternatives.c:1520
+#, c-format
+msgid "failed to create admindir: %s\n"
+msgstr "не вдалося створити адміністративний каталог: %s\n"
+
+#: ../alternatives.c:1525
+#, c-format
+msgid "admindir %s invalid\n"
+msgstr "каталог admindir %s неправильний\n"
+
+#: ../alternatives.c:1535
+#, c-format
+msgid "alternatives version %s\n"
+msgstr "alternatives версія %s\n"
