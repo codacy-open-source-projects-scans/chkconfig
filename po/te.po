@@ -1,0 +1,616 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Krishnababu Krothapalli <kkrothap@redhat.com>, 2007-2009
+# Krishnababu Krothapalli <krisnababu@gmail.com>, 2011-2012
+# Krishnababu Krothapalli <krisnababu@gmail.com>, 2013
+# notting <notting@redhat.com>, 2011
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-09 17:46+0200\n"
+"PO-Revision-Date: 2022-03-10 09:13+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Telugu <https://translate.fedoraproject.org/projects/fedora-"
+"sysv/chkconfig/te/>\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.11.2\n"
+
+#: ../chkconfig.c:41
+#, c-format
+msgid "%s version %s - Copyright (C) 1997-2000 Red Hat, Inc.\n"
+msgstr "%s ప్రతి %s - కాపీహక్కు (C) 1997-2000 Red Hat, Inc.\n"
+
+#: ../chkconfig.c:43
+#, c-format
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+msgstr "GNU పబ్లిక్ లైసెన్సుకింద ఇది ఉచితంగా తిరిగి పంపిణీ చేయబడవచ్చు.\n"
+
+#: ../chkconfig.c:47
+#, c-format
+msgid "usage:   %s [name]\n"
+msgstr "వాడుక:   %s [name]\n"
+
+#: ../chkconfig.c:49
+#, c-format
+msgid "usage:   %s <enable|disable|is-enabled> [name] \n"
+msgstr ""
+
+#: ../chkconfig.c:52
+#, c-format
+msgid "usage:   %s [--list] [--type <type>] [name]\n"
+msgstr "ఉపయోగము:   %s [--list] [--type <type>] [name]\n"
+
+#: ../chkconfig.c:54
+#, c-format
+msgid "         %s --add <name>\n"
+msgstr "         %s --add <name>\n"
+
+#: ../chkconfig.c:55
+#, c-format
+msgid "         %s --del <name>\n"
+msgstr "         %s --del <name>\n"
+
+#: ../chkconfig.c:56
+#, c-format
+msgid "         %s --override <name>\n"
+msgstr "         %s --override <name>\n"
+
+#: ../chkconfig.c:58
+#, c-format
+msgid "         %s [--level <levels>] [--type <type>] <name> %s\n"
+msgstr "         %s [--level <levels>] [--type <type>] <name> %s\n"
+
+#: ../chkconfig.c:66
+#, c-format
+msgid ""
+"\n"
+"Note: This output shows SysV services only and does not include native\n"
+"      systemd services. SysV configuration data might be overridden by "
+"native\n"
+"      systemd configuration.\n"
+"\n"
+msgstr ""
+"\n"
+"గమనిక: ఈ అవుట్పుట్ SysV సేవలను మాత్రమే చూపను మరియు నేటివ్\n"
+"      systemd సేవలను కలిగివుండదు. SysV ఆకృతీకరణ డాటా \n"
+"నేటివ్ systemd ఆకృతీకరణచే\n"
+"      వోవర్‌రిడెన్ అయివుండవచ్చు.\n"
+"\n"
+
+#: ../chkconfig.c:73
+#, c-format
+msgid ""
+"      If you want to list systemd services use 'systemctl list-unit-files'.\n"
+"      To see services enabled on particular target use\n"
+"      'systemctl list-dependencies [target]'.\n"
+"\n"
+msgstr ""
+"      మీరు systemd సేవలను జాబితా చేయవలెనంటే 'systemctl list-unit-files' వుపయోగించండి.\n"
+"      ఫలానా లక్ష్యముపై చేతనపరచిన సేవలను చూడుటకు\n"
+"      'systemctl list-dependencies [target]' వుపయోగించండి.\n"
+"\n"
+
+#: ../chkconfig.c:83
+#, c-format
+msgid ""
+"service %s supports chkconfig, but is not referenced in any runlevel (run "
+"'chkconfig --add %s')\n"
+msgstr ""
+"వినియీగం %s chkconfigకి మద్దతిస్తుంది, కానీ ఏ వినియోగ స్థాయిలోనూ ఇది సంప్రదించదగ్గది కాదు (ఉపయోగించు "
+"'chkconfig --కలుపు %s')\n"
+
+#: ../chkconfig.c:87
+#, c-format
+msgid "service %s does not support chkconfig\n"
+msgstr "%s వినియోగం chkconfigకి మద్దతివ్వదు\n"
+
+#: ../chkconfig.c:89
+#, c-format
+msgid "error reading information on service %s: %s\n"
+msgstr "%s వినియోగంలో దోషపూరిత సమాచార పఠనం : %s\n"
+
+#: ../chkconfig.c:98
+#, c-format
+msgid "You do not have enough privileges to perform this operation.\n"
+msgstr "ఈ కార్యమును జరుపుటకు మీరు సరిపోవు అనుమతులను కలిగిలేరు.\n"
+
+#: ../chkconfig.c:469 ../chkconfig.c:474 ../chkconfig.c:600
+msgid "on"
+msgstr "మీద"
+
+#: ../chkconfig.c:469 ../chkconfig.c:474 ../chkconfig.c:600
+msgid "off"
+msgstr "నుంచి"
+
+#: ../chkconfig.c:555
+#, c-format
+msgid "xinetd based services:\n"
+msgstr "xinetd ఆధారిత సేవలు:\n"
+
+#: ../chkconfig.c:557
+#, c-format
+msgid "failed to open directory %s: %s\n"
+msgstr "%s డైరెక్టరీని తెరవటంలో వైఫల్యం: %s\n"
+
+#: ../chkconfig.c:695
+#, c-format
+msgid "Note: Forwarding request to 'systemctl %s %s'.\n"
+msgstr "గమనిక: అభ్యర్థనను 'systemctl %s %s' కు పంపుచున్నది.\n"
+
+#: ../chkconfig.c:701
+#, c-format
+msgid "Failed to forward service request to systemctl: %m\n"
+msgstr "సేవా అభ్యర్ధనను systemctl కు పంపుటలో విఫలమైంది: %m\n"
+
+#: ../chkconfig.c:757
+#, c-format
+msgid "%s version %s\n"
+msgstr "%s ప్రతి %s\n"
+
+#: ../chkconfig.c:770
+#, c-format
+msgid "--type must be 'sysv' or 'xinetd'\n"
+msgstr "--type తప్పక 'sysv' లేదా 'xinetd' కావాలి\n"
+
+#: ../chkconfig.c:776
+#, c-format
+msgid "only one of --list, --add, --del, or --override may be specified\n"
+msgstr "కేవలం ఒకటి --జాబితా, --కలపటం, లేదా --తొలగించటం మాత్రమే తెలుపవలెను\n"
+
+#: ../chkconfig.c:887
+#, c-format
+msgid "only one runlevel may be specified for a chkconfig query\n"
+msgstr "chkconfig ప్రశ్న కోసం కేవలం ఒక్క వినియోగ స్థాయి తెల్పబడవచ్చు\n"
+
+#: ../ntsysv.c:49
+msgid "Press <F1> for more information on a service."
+msgstr "సర్వరులోని అధిక సమాచారంకోసం <F1> నొక్కండి."
+
+#: ../ntsysv.c:99 ../ntsysv.c:138
+msgid "Ok"
+msgstr "సరే"
+
+#: ../ntsysv.c:99
+msgid "Back"
+msgstr "వెనక్కు"
+
+#: ../ntsysv.c:99
+msgid "Cancel"
+msgstr "రద్దు"
+
+#: ../ntsysv.c:111
+msgid "What services should be automatically started?"
+msgstr "ఏ సేవలు స్వయంచాలకంగా ప్రారంభించబడాలి?"
+
+#: ../ntsysv.c:118
+msgid "Services"
+msgstr "సేవలు"
+
+#: ../ntsysv.c:334 ../ntsysv.c:363 ../ntsysv.c:402
+#, c-format
+msgid "error reading info for service %s: %s\n"
+msgstr "%s వినియోగంలో దోషపూరిత సమాచార పఠనం : %s\n"
+
+#: ../ntsysv.c:412
+#, c-format
+msgid "error reading from directory %s: %s\n"
+msgstr "%s డైరెక్టరీనుండీ చదవటంలో దోషం: %s\n"
+
+#: ../ntsysv.c:452
+#, c-format
+msgid "You must be root to run %s.\n"
+msgstr "%s ఉపయోగించటానికి మీరు తప్పకుండా రూట్ యందు ఉండాలి.\n"
+
+#: ../ntsysv.c:469
+#, c-format
+msgid "bad argument to --levels\n"
+msgstr "--స్థాయిలకు చెడ్డ వాదన\n"
+
+#: ../ntsysv.c:477
+#, c-format
+msgid "No services may be managed by ntsysv!\n"
+msgstr "ntsysv చేత ఏ సేవలూ నిర్వహించబడకపోవచ్చు!\n"
+
+#: ../leveldb.c:348
+#, c-format
+msgid "failed to open %s/init.d: %s\n"
+msgstr "%s/init.d తెరవటంలో వైఫల్యం: %s\n"
+
+#: ../leveldb.c:797 ../leveldb.c:805
+#, c-format
+msgid "failed to glob pattern %s: %s\n"
+msgstr "%s గ్లోబ్ క్రమానికి వైఫల్యం: %s\n"
+
+#: ../leveldb.c:851
+#, c-format
+msgid "cannot determine current run level\n"
+msgstr "ప్రస్తుత వినియోగస్థాయి నిర్ణయించలేము\n"
+
+#: ../leveldb.c:934
+#, fuzzy, c-format
+msgid "Unable to set SELinux context for %s: %s\n"
+msgstr "%s డైరెక్టరీని తెరవటంలో వైఫల్యం: %s\n"
+
+#: ../leveldb.c:959
+#, c-format
+msgid "failed to make symlink %s: %s\n"
+msgstr "symlink %s చేయటంలో వైఫల్యం: %s\n"
+
+#: ../alternatives.c:83
+#, c-format
+msgid "alternatives version %s - Copyright (C) 2001 Red Hat, Inc.\n"
+msgstr "ప్రత్యామ్నాయ ప్రతి %s - కాపీహక్కు (C) 2001 Red Hat, Inc.\n"
+
+#: ../alternatives.c:85
+#, c-format
+msgid ""
+"This may be freely redistributed under the terms of the GNU Public License.\n"
+"\n"
+msgstr ""
+"GNU పబ్లిక్ లైసెన్సు కింద ఇది ఉచితంగా తిరిగి పంపిణీ చేయబడవచ్చు.\n"
+"\n"
+
+#: ../alternatives.c:88
+#, c-format
+msgid "usage: alternatives --install <link> <name> <path> <priority>\n"
+msgstr "వినియోగం: ప్రత్యామ్నాయాలు --సంస్థాపన <link> <name> <path> <priority>\n"
+
+#: ../alternatives.c:89
+#, c-format
+msgid "                    [--initscript <service>]\n"
+msgstr "                    [--initscript <service>]\n"
+
+#: ../alternatives.c:90
+#, c-format
+msgid "                    [--family <family>]\n"
+msgstr ""
+
+#: ../alternatives.c:91
+#, fuzzy, c-format
+msgid ""
+"                    [--follower <follower_link> <follower_name> "
+"<follower_path>]*\n"
+msgstr "                    [--slave <link> <name> <path>]*\n"
+
+#: ../alternatives.c:92
+#, c-format
+msgid "       alternatives --remove <name> <path>\n"
+msgstr "       ప్రత్యామ్నాయాలు --తొలగించు <name> <path>\n"
+
+#: ../alternatives.c:93
+#, c-format
+msgid "       alternatives --auto <name>\n"
+msgstr "       ప్రత్యామ్నాయాలు --స్వీయం <name>\n"
+
+#: ../alternatives.c:94
+#, c-format
+msgid "       alternatives --config <name>\n"
+msgstr "       ప్రత్యామ్నాయాలు --ఆకృతి <name>\n"
+
+#: ../alternatives.c:95
+#, c-format
+msgid "       alternatives --display <name>\n"
+msgstr "       ప్రత్యామ్నాయాలు --ప్రదర్శన <name>\n"
+
+#: ../alternatives.c:96
+#, fuzzy, c-format
+msgid "       alternatives --set <name> <path/family>\n"
+msgstr "       ప్రత్యామ్నాయాలు --సమితి <name> <path>\n"
+
+#: ../alternatives.c:97
+#, c-format
+msgid "       alternatives --list\n"
+msgstr "       alternatives --list\n"
+
+#: ../alternatives.c:98
+#, fuzzy, c-format
+msgid "       alternatives --remove-all <name>\n"
+msgstr "       ప్రత్యామ్నాయాలు --తొలగించు <name> <path>\n"
+
+#: ../alternatives.c:99
+#, fuzzy, c-format
+msgid ""
+"       alternatives --add-follower <name> <path> <follower_link> "
+"<follower_name> <follower_path>\n"
+msgstr "       ప్రత్యామ్నాయాలు --తొలగించు <name> <path>\n"
+
+#: ../alternatives.c:100
+#, fuzzy, c-format
+msgid "       alternatives --remove-follower <name> <path> <follower_name>\n"
+msgstr "       ప్రత్యామ్నాయాలు --తొలగించు <name> <path>\n"
+
+#: ../alternatives.c:101
+#, c-format
+msgid "\n"
+msgstr "\n"
+
+#: ../alternatives.c:102
+#, c-format
+msgid ""
+"common options: --verbose --test --help --usage --version --keep-missing --"
+"keep-foreign\n"
+msgstr ""
+
+#: ../alternatives.c:104
+#, c-format
+msgid "                --altdir <directory> --admindir <directory>\n"
+msgstr "                --altdir <directory> --admindir <directory>\n"
+
+#: ../alternatives.c:372
+#, c-format
+msgid "reading %s\n"
+msgstr "చదువుతోంది %s\n"
+
+#: ../alternatives.c:377
+#, c-format
+msgid "failed to open %s: %s\n"
+msgstr "%s తెరవటంలో వైఫల్యం: %s\n"
+
+#: ../alternatives.c:385
+#, c-format
+msgid "failed to read %s: %s\n"
+msgstr "%s చదవటంలో వైఫల్యం: %s\n"
+
+#: ../alternatives.c:393
+#, c-format
+msgid "%s empty!\n"
+msgstr "%s ఖాళీ!\n"
+
+#: ../alternatives.c:403
+#, c-format
+msgid "bad mode on line 1 of %s\n"
+msgstr "%s యొక్క 1 లైనులో చెడ్డ వ్యవస్థ\n"
+
+#: ../alternatives.c:410
+#, c-format
+msgid "bad primary link in %s\n"
+msgstr "%sలో చెడ్డ ప్రాధమిక లింకు\n"
+
+#: ../alternatives.c:423
+#, c-format
+msgid "path %s unexpected in %s\n"
+msgstr "%s దారి %sలో ఊహించనిది\n"
+
+#: ../alternatives.c:432
+#, fuzzy, c-format
+#| msgid "missing path for slave %s in %s\n"
+msgid "missing path for follower %s in %s\n"
+msgstr "%s లో %s స్లేవ్ కోసం తప్పిన దారి\n"
+
+#: ../alternatives.c:447
+#, c-format
+msgid "unexpected end of file in %s\n"
+msgstr "%sలో ఫైలు యొక్క ఊహించని ముగింపు\n"
+
+#: ../alternatives.c:455
+#, c-format
+msgid "path to alternate expected in %s\n"
+msgstr "%sలో ప్రత్యామ్నాయ ఊహకి మార్గం\n"
+
+#: ../alternatives.c:456 ../alternatives.c:484 ../alternatives.c:497
+#: ../alternatives.c:513 ../alternatives.c:539
+#, c-format
+msgid "unexpected line in %s: %s\n"
+msgstr "%sలో ఊహించని లైను: %s\n"
+
+#: ../alternatives.c:482
+#, c-format
+msgid "closing '@' missing or the family is empty in %s\n"
+msgstr ""
+
+#: ../alternatives.c:496
+#, c-format
+msgid "numeric priority expected in %s\n"
+msgstr "%sలో ఊహిస్తున్న సంఖ్యాపర ప్రాధాన్యం\n"
+
+#: ../alternatives.c:512
+#, fuzzy, c-format
+#| msgid "slave path expected in %s\n"
+msgid "follower path expected in %s\n"
+msgstr "%sలో ఆశిస్తున్న స్లేవ్డు మార్గం\n"
+
+#: ../alternatives.c:549
+#, c-format
+msgid "failed to read link %s: %s\n"
+msgstr "%s లింకును చదవటంలో వైఫల్యం: %s\n"
+
+#: ../alternatives.c:566
+#, c-format
+msgid "link points to no alternative -- setting mode to manual\n"
+msgstr "ప్రత్యామ్నాయ రాహిత్యానికి లింకు పాయింట్లు -- మానవీయానికి అమర్పు రీతి\n"
+
+#: ../alternatives.c:571
+#, c-format
+msgid "link changed -- setting mode to manual\n"
+msgstr "లింకు మారింది -- మానవీయానికి అమర్పు రీతి\n"
+
+#: ../alternatives.c:629 ../alternatives.c:636
+#, c-format
+msgid "would remove %s\n"
+msgstr "%s తొలగించమంటారా\n"
+
+#: ../alternatives.c:631 ../alternatives.c:640 ../alternatives.c:693
+#, c-format
+msgid "failed to remove link %s: %s\n"
+msgstr "%s లింకును తొలగించటంలో వైఫల్యం: %s\n"
+
+#: ../alternatives.c:659
+#, fuzzy, c-format
+#| msgid "failed to link %s -> %s: %s\n"
+msgid "failed to link %s -> %s: %s exists and it is not a symlink\n"
+msgstr "లింకు %s -> %sకి వైఫల్యం: %s\n"
+
+#: ../alternatives.c:664
+#, c-format
+msgid ""
+"failed to link %s -> %s: --keep-foreign was set and link %s points outside  "
+"%s\n"
+msgstr ""
+
+#: ../alternatives.c:668 ../alternatives.c:686
+#, c-format
+msgid "would link %s -> %s\n"
+msgstr "లింకు %s -> %s\n"
+
+#: ../alternatives.c:677 ../alternatives.c:699
+#, c-format
+msgid "failed to link %s -> %s: %s\n"
+msgstr "లింకు %s -> %sకి వైఫల్యం: %s\n"
+
+#: ../alternatives.c:732
+#, c-format
+msgid "%s already exists\n"
+msgstr "%s ఇప్పటికే ఉంది\n"
+
+#: ../alternatives.c:734
+#, c-format
+msgid "failed to create %s: %s\n"
+msgstr "%s సృష్టించటంలో వైఫల్యం: %s\n"
+
+#: ../alternatives.c:767
+#, c-format
+msgid "failed to replace %s with %s: %s\n"
+msgstr "%sని %sతో పునఃసంస్థాపించటంలో వైఫల్యం: %s\n"
+
+#: ../alternatives.c:795 ../alternatives.c:801 ../alternatives.c:813
+#: ../alternatives.c:820
+#, c-format
+msgid "running %s\n"
+msgstr "%s నడుస్తోంది\n"
+
+#: ../alternatives.c:894
+#, fuzzy, c-format
+#| msgid "link %s incorrect for slave %s (%s %s)\n"
+msgid "link %s incorrect for follower %s (%s %s)\n"
+msgstr "%s లింకు %s అమ్మకంలో సరైందికాదు (%s %s)\n"
+
+#: ../alternatives.c:969 ../alternatives.c:1006 ../alternatives.c:1220
+#: ../alternatives.c:1251
+#, c-format
+msgid "%s has not been configured as an alternative for %s\n"
+msgstr "%s కోసం ప్రత్యామ్నాయంగా %s ఇంకా ఆకృతీకరించబడలేదు\n"
+
+#: ../alternatives.c:987
+#, fuzzy, c-format
+msgid "%s has not been configured as an follower alternative for %s (%s)\n"
+msgstr "%s కోసం ప్రత్యామ్నాయంగా %s ఇంకా ఆకృతీకరించబడలేదు\n"
+
+#: ../alternatives.c:1045
+#, c-format
+msgid "the primary link for %s must be %s\n"
+msgstr "%s కోసం ప్రాధమిక లింకు తప్పక %sకావాలి\n"
+
+#: ../alternatives.c:1097
+#, c-format
+msgid "%s - status is auto.\n"
+msgstr "%s - స్థితి స్వీయమైంది.\n"
+
+#: ../alternatives.c:1099
+#, c-format
+msgid "%s - status is manual.\n"
+msgstr "%s - స్థితి మానవీయమైంది.\n"
+
+#: ../alternatives.c:1101
+#, c-format
+msgid " link currently points to %s\n"
+msgstr " లింకు ప్రస్తుతం %s కి పాయింట్ చేయబడింది\n"
+
+#: ../alternatives.c:1106
+#, c-format
+msgid "family %s "
+msgstr ""
+
+#: ../alternatives.c:1107
+#, c-format
+msgid "priority %d\n"
+msgstr ""
+
+#: ../alternatives.c:1109
+#, fuzzy, c-format
+#| msgid " slave %s: %s\n"
+msgid " follower %s: %s\n"
+msgstr " స్లేవ్ %s: %s\n"
+
+#: ../alternatives.c:1114
+#, c-format
+msgid "Current `best' version is %s.\n"
+msgstr "ప్రస్తుత `ఉత్తమ' ప్రతి %s.\n"
+
+#: ../alternatives.c:1149
+#, c-format
+msgid "There is %d program that provides '%s'.\n"
+msgstr "%d పరిక్రమం '%s'ని సమకూర్చేది.\n"
+
+#: ../alternatives.c:1150
+#, c-format
+msgid "There are %d programs which provide '%s'.\n"
+msgstr "%d పరిక్రమాలు '%s'ని సమకూర్చేవి.\n"
+
+#: ../alternatives.c:1154
+#, c-format
+msgid "  Selection    Command\n"
+msgstr "  ఎన్నిక    ఆదేశం\n"
+
+#: ../alternatives.c:1169
+#, c-format
+msgid "Enter to keep the current selection[+], or type selection number: "
+msgstr "ప్రస్తుత ఎన్నికలను[+] ఉంచటానికి, లేదా ఎన్నిక సంఖ్యను ముద్రించటానికి ప్రవేశం: "
+
+#: ../alternatives.c:1173
+#, c-format
+msgid ""
+"\n"
+"error reading choice\n"
+msgstr ""
+"\n"
+"ఐచ్ఛికాన్ని చదవటంలో దోషం\n"
+
+#: ../alternatives.c:1200
+#, c-format
+msgid "cannot access %s/%s: No such file or directory\n"
+msgstr ""
+
+#: ../alternatives.c:1267
+#, c-format
+msgid "(would remove %s\n"
+msgstr "(తొలగించబడాలి %s\n"
+
+#: ../alternatives.c:1269
+#, c-format
+msgid "failed to remove %s: %s\n"
+msgstr "%sను తొలగించటంలో వైఫల్యం: %s\n"
+
+#: ../alternatives.c:1444
+#, c-format
+msgid "--family can't contain the symbol '@'\n"
+msgstr ""
+
+#: ../alternatives.c:1506
+#, c-format
+msgid "altdir %s invalid\n"
+msgstr "altdir %s చెల్లనిది\n"
+
+#: ../alternatives.c:1520
+#, fuzzy, c-format
+#| msgid "failed to create %s: %s\n"
+msgid "failed to create admindir: %s\n"
+msgstr "%s సృష్టించటంలో వైఫల్యం: %s\n"
+
+#: ../alternatives.c:1525
+#, c-format
+msgid "admindir %s invalid\n"
+msgstr "నిర్వహణdir %s చెల్లనిది\n"
+
+#: ../alternatives.c:1535
+#, c-format
+msgid "alternatives version %s\n"
+msgstr "ప్రత్యామ్నాయ ప్రతి %s\n"

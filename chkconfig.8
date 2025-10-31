@@ -1,0 +1,188 @@
+.TH CHKCONFIG 8 "Wed Oct 8 1997"
+.UC 4
+.SH NAME
+chkconfig \- updates and queries runlevel information for system services
+
+.SH SYNOPSIS
+\fBchkconfig\fR [\fB--list\fR] [\fB--type\fR \fItype\fR] [\fIname\fR]
+.br
+\fBchkconfig\fR \fB--add\fR \fIname\fR
+.br
+\fBchkconfig\fR \fB--del\fR \fIname\fR
+.br
+\fBchkconfig\fR \fB--override\fR \fIname\fR
+.br
+\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] [\fB--type\fR \fItype\fR] [\fB--no-redirect\fR] \fIname\fR <\fBon\fR|\fBoff\fR|\fBreset\fR|\fBresetpriorities\fR>
+.br
+\fBchkconfig\fR [\fB--level\fR \fIlevels\fR] [\fB--type\fR \fItype\fR] [\fB--no-redirect\fR] \fIname\fR 
+.br
+
+.SH DESCRIPTION
+\fBchkconfig\fR provides a simple command-line tool for maintaining the
+/etc/rc[0-6].d directory hierarchy by relieving system administrators of
+the task of directly manipulating the numerous symbolic links in those
+directories.
+
+This implementation of \fBchkconfig\fR was inspired by the \fBchkconfig\fR
+command present in the IRIX operating system. Rather than maintaining 
+configuration information outside of the /etc/rc[0-6].d hierarchy, however,
+this version directly manages the symlinks in /etc/rc[0-6].d. This leaves all
+of the configuration information regarding what services \fIinit\fR
+starts in a single location.
+
+\fBchkconfig\fR has five distinct functions: adding new services for
+management, removing services from management, listing the current
+startup information for services, changing the startup information
+for services, and checking the startup state of a particular service.
+
+When \fBchkconfig\fR is run with only a service name, it checks to see if
+the service is configured to be started in the current runlevel. If
+it is, \fBchkconfig\fR returns true; otherwise it returns false. The
+\fB--level\fR option may be used to have \fBchkconfig\fR query an
+alternative runlevel rather than the current one.
+
+When \fBchkconfig\fR is run with the \fB--list\fR argument, or no
+arguments at all, a listing is displayed of all services and their
+current configuration.
+
+If one of \fBon\fR, \fBoff\fR, \fBreset\fR, or \fBresetpriorities\fR is
+specified after the service name, \fBchkconfig\fR changes the startup
+information for the specified service.  The \fBon\fR and \fBoff\fR flags
+cause the service to be started or stopped, respectively, in the runlevels
+being changed. The \fBreset\fR flag resets the on/off state for all
+runlevels for the service to whatever is specified in the init script in question,
+while the \fBresetpriorities\fR flag resets the start/stop priorities
+for the service to whatever is specified in the init script.
+
+By default, the \fBon\fR and \fBoff\fR options affect only runlevels 2, 3, 4,
+and 5, while \fBreset\fR and \fBresetpriorities\fR affects all of the runlevels.
+The \fB--level\fR option may be used to specify which runlevels are affected.
+
+Note that for every service, each runlevel has either a start script
+or a stop script.  When switching runlevels, init will not re-start
+an already-started service, and will not re-stop a service that is
+not running.
+
+\fBchkconfig\fR also can manage xinetd scripts via the means
+of xinetd.d configuration files. Note that only the
+\fBon\fR, \fBoff\fR, and \fB-\-list\fR commands are supported
+for xinetd.d services.
+
+\fBchkconfig\fR supports a \fB-\-type\fR argument to limit actions to only
+a specific type of services, in the case where services of either type may
+share a name. Possible values for \fItype\fR are \fIsysv\fR
+and \fIxinetd\fR.
+
+.SH OPTIONS
+.TP
+\fB-\-level \fIlevels\fR
+Specifies the run levels an operation should pertain to. It is given as
+a string of numbers from 0 to 6. For example, \fB--level 35\fR specifies
+runlevels 3 and 5.
+
+.TP
+\fB-\-no-redirect\fR
+When chkconfig is run on a system that uses systemd as its init system,
+chkconfig will forward commands to systemd if a systemd service
+file exists for it.  This switch turns off the redirection to systemd and
+only operates on the symlinks in /etc/rc[0-6].d. This option is only
+valid when \fBon\fR, \fBoff\fR, or no command (to check enablement)
+is passed to a service.
+
+.TP
+\fB-\-add\fR \fIname\fR
+
+This option adds a new service for management by \fBchkconfig\fR.
+When a new service is added, \fBchkconfig\fR ensures that the service
+has either a start or a kill entry in every runlevel. If any runlevel
+is missing such an entry, \fBchkconfig\fR creates the appropriate entry
+as specified by the default values in the init script. Note that
+default entries in LSB-delimited 'INIT INFO' sections take precedence
+over the default runlevels in the initscript; if any Required-Start or
+Required-Stop entries are present, the start and stop priorities of the
+script will be adjusted to account for these dependencies.
+
+.TP
+\fB-\-del\fR \fIname\fR
+The service is removed from \fBchkconfig\fR management, and any symbolic
+links in /etc/rc[0-6].d which pertain to it are removed.
+
+Note that future package installs for this service may run
+\fBchkconfig \-\-add\fR, which will re-add such links. To disable a
+service, run \fBchkconfig \fIname\fR \fBoff\fR.
+
+.TP
+\fB-\-override\fR \fIname\fR
+If service \fIname\fR is configured exactly as it would be if the
+\fB-\-add\fR option had been specified with no override file in
+/etc/chkconfig.d/\fIname\fR, and if /etc/chkconfig.d/\fIname\fR now
+exists and is specified differently from the base initscript,
+change the configuration for service \fIname\fR to follow the
+overrides instead of the base configuration.
+
+.TP
+\fB-\-list\fR \fIname\fR
+This option lists all of the services which \fBchkconfig\fR knows about,
+and whether they are stopped or started in each runlevel. If \fIname\fR
+is specified, information in only display about service \fIname\fR.
+
+.SH RUNLEVEL FILES
+
+Each service which should be manageable by \fBchkconfig\fR needs two
+or more commented lines added to its init.d script. The first line
+tells \fBchkconfig\fR what runlevels the service should be started in
+by default, as well as the start and stop priority levels. If the service
+should not, by default, be started in any runlevels, a \fB\-\fR should be
+used in place of the runlevels list.  The second
+line contains a description for the service, and may be extended across
+multiple lines with backslash continuation.
+
+For example, random.init has these three lines:
+.nf
+.ft C
+# chkconfig: 2345 20 80
+# description: Saves and restores system entropy pool for \e
+#              higher quality random number generation.
+.ft R
+.fi
+This says that the random script should be started in levels 2, 3, 4,
+and 5, that its start priority should be 20, and that its stop
+priority should be 80.  You should be able to figure out what the
+description says; the \e causes the line to be continued.  The
+extra space in front of the line is ignored.
+
+chkconfig also supports LSB-style init stanzas, and will apply
+them in preference to "chkconfig:" lines where available.
+A LSB stanza looks like:
+.nf
+.ft C
+### BEGIN INIT INFO
+# Provides: foo
+# Required-Start: bar
+# Defalt-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Description: Foo init script
+### END INIT INFO
+.ft R
+.fi
+
+In this case, the start priority of "foo" would be changed such
+that it is higher than the "bar" start priority, if "bar" is enabled.
+Care must be taken when adding dependencies, as they can cause
+vast shifts in the start and stop priorities of many scripts.
+
+.SH OVERRIDE FILES
+
+Files in /etc/chkconfig.d/\fIservicename\fR are parsed using the
+same comments that chkconfig notices in init service scripts,
+and override values in the init service scripts themselves.
+
+.SH SEE ALSO
+.IR init (8)
+.IR ntsysv (8)
+.IR system-config-services (8)
+
+.SH AUTHOR
+.nf
+Erik Troan <ewt@redhat.com>
+.fi
